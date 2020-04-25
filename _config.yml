@@ -8,7 +8,7 @@ subtitle: code之路
 description: 前端
 keywords: 前端
 author: 沐雪
-language: zh-Hans
+language: zh-CN
 timezone:
 
 # URL
@@ -45,12 +45,18 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
-  line_number: true
-  auto_detect: false
-  tab_replace: ""
-  wrap: true
-  hljs: false
+  enable: false
+  # line_number: true
+  # auto_detect: false
+  # tab_replace: ""
+  # wrap: true
+  # hljs: false
+
+prism_plugin:
+  mode: "preprocess" # realtime/preprocess
+  theme: "tomorrow"
+  line_number: true # default false
+  custom_css:
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -58,7 +64,7 @@ highlight:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ""
-  per_page: 10
+  per_page: 12
   order_by: -date
 
 # Category & Tag
@@ -106,3 +112,18 @@ leancloud_visitors:
   enable: true
   app_id: wWmiz40M8KaM8dalyJuJ2hK5-gzGzoHsz
   app_key: MX6crkYYCU4pgYMdFtgzufFX
+
+search:
+  path: search.xml
+  field: post
+
+permalink_pinyin:
+  enable: true
+  separator: "-" # default: '-'
+
+githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:
