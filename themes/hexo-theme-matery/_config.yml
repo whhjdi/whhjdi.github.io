@@ -79,8 +79,8 @@ music:
   autoHide: true # hide automaticaly
   server: netease #require	music platform: netease, tencent, kugou, xiami, baidu
   type: playlist #require song, playlist, album, search, artist
-  id: 503838841 #require	song id / playlist id / album id / search keyword
-  fixed: true # 开启吸底模式
+  id: 16674330 #require	song id / playlist id / album id / search keyword 503838841
+  fixed: false # 开启吸底模式
   autoplay: false # 是否自动播放
   theme: "#42b983"
   loop: "all" # 音频循环播放, 可选值: 'all', 'one', 'none'
@@ -168,7 +168,7 @@ reward:
 # minCharNumber: Approve copyright information by copying at least how many characters.
 # 是否激活复制文章时追加博客和作者的版权信息.
 copyright:
-  enable: false
+  enable: true
   minCharNumber: 120 # 至少复制多少个字符就追加版权信息.
   description: 本文章著作权归作者所有，任何形式的转载都请注明出处。
 
@@ -310,15 +310,15 @@ livere:
 # To use it, activate the configuration item and set appId and appKey.
 # Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
 valine:
-  enable: false
-  appId:
-  appKey:
+  enable: true
+  appId: wWmiz40M8KaM8dalyJuJ2hK5-gzGzoHsz
+  appKey: MX6crkYYCU4pgYMdFtgzufFX
   notify: false
   verify: false
   visitor: true
   avatar: "mm" # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
   pageSize: 10
-  placeholder: "just go go" # Comment Box placeholder
+  placeholder: "快来评论我吧" # Comment Box placeholder
   background: /medias/comment_bg.png
 
 # The configuration of the MiniValine comment module is not activated by default.
@@ -366,8 +366,8 @@ busuanziStatistics:
 # Add google analytics configuration
 # 添加 Google Analytics 配置
 googleAnalytics:
-  enable: false
-  id:
+  enable: true
+  id: UA-130564198-1
 
 # Add baidu analytics configuration
 # 添加 baidu Analytics 配置

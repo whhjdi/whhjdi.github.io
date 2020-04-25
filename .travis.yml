@@ -1,7 +1,7 @@
 sudo: false
 language: node_js
 node_js:
-  - 12 # use nodejs v10 LTS
+  - stable # use nodejs v10 LTS
 cache:
   directories:
     - node_modules
@@ -13,6 +13,7 @@ install:
   - npm install
 
 script:
+  - hexo clean
   - hexo g
 
 after_script:
@@ -22,8 +23,12 @@ after_script:
   - git config user.email "418605872@qq.com"
   - git add .
   - git commit -m "Travis CI Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
-  - git push --force --quiet "https://${GH_TOKEN}@github.com/whhjdi/whhjdi.github.io" master:master
+  - git push --force --quiet "https://${GH_TOKEN}@{GH_REF}" master:master
 
 branches:
   only:
     - hexo
+
+env:
+  global:
+    - GH_REF: github.com/whhjdi/whhjdi.github.io
