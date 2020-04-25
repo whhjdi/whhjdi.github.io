@@ -14,5 +14,7 @@ deploy:
   github-token: $GH_TOKEN
   keep-history: true
   on:
-    branch: master
+    all_branches: true # solve a permission problem
+    target_branch: master
+    # branch: master
   local-dir: public
