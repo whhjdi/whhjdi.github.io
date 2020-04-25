@@ -2,19 +2,28 @@ sudo: false
 language: node_js
 node_js:
   - 12 # use nodejs v10 LTS
-cache: yarn
+cache:
+  directories:
+    - node_modules
+before_install:
+  - export TZ='Asia/Shanghai'
+
+install:
+  - npm install hexo-cli -g
+  - npm install
+
+script:
+  - hexo g
+
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "whhjdi"
+  - git config user.email "418605872@qq.commit"
+  - git add .
+  - git commit -m "Travis CI Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+
 branches:
   only:
-    - hexo # build master branch only
-script:
-  - hexo generate # generate static files
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GH_TOKEN
-  keep-history: true
-  on:
-    all_branches: true # solve a permission problem
-    target_branch: master
-    # branch: master
-  local-dir: public
+    - hexo
