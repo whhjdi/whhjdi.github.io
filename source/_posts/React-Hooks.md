@@ -1,7 +1,7 @@
 ---
 title: React-Hooks
-date: 2019-10-01 17:31:19
-tags: [react,hooks]
+date: 2019-12-01 17:31:19
+tags: [react, hooks]
 cover_img:
 feature_img:
 description:
@@ -9,6 +9,11 @@ keywords:
 ---
 
 # React Hooks
+
+抽象出来就是下面这种形式
+V = F(state,props)
+UI = V + useHooks1 + useHooks2........
+之前的 class api 可以丢掉了
 
 ## State hooks
 
@@ -175,13 +180,13 @@ function App() {
 function useSize() {
   const [size, setSize] = useState({
     width: document.documentElement.clientWidth,
-    height: document.documentElement.clientHeight
+    height: document.documentElement.clientHeight,
   });
 
   const onResize = useCallback(() => {
     setSize({
       width: document.documentElement.clientWidth,
-      height: document.documentElement.clientHeight
+      height: document.documentElement.clientHeight,
     });
   }, []);
   useEffect(() => {

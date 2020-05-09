@@ -8,6 +8,8 @@ cover_img: https://ws4.sinaimg.cn/large/006tNbRwly1fxze3mpszyj30xc0dwq3z.jpg
 
 # TypeScript
 
+> 最新整理的笔记放到 oneNote 了
+
 讲真除了几个新加的数据类型，学起来就感觉和学 es6 一样。。。。。。
 
 ## 安装与调试
@@ -85,7 +87,7 @@ let obj2 = JSON.parse(string);
   let obj = {
     name: "muxue",
     age: 18,
-    nation: "China"
+    nation: "China",
   };
   //解构
   let { name, age, nation } = obj;
@@ -106,4 +108,3 @@ let obj2 = JSON.parse(string);
   sayHi({ name: "muxue", age: 18 });
 }
 ```
-

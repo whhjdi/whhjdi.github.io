@@ -8,6 +8,8 @@ cover_img: https://ws4.sinaimg.cn/large/006tNbRwly1fxze3mpszyj30xc0dwq3z.jpg
 
 # TypeScript
 
+> 最新整理的笔记放到 oneNote 了
+
 接口类似于低配版的类，类就是高配版的接口
 
 ## 接口
@@ -57,7 +59,7 @@ interface Human extends Animal {
 let aa: Human = {
   name: "da",
   age: 12,
-  move() {}
+  move() {},
 };
 ```
 
